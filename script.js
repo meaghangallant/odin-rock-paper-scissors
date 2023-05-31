@@ -1,12 +1,14 @@
 // FUNCTION #1: Getting computer's randomized choice 
 
-  function getComputerChoice( ) {
+function getComputerChoice() {
   let computerOptions = ['rock', 'paper', 'scissors'];
 
-  let computerChoice = computerOptions[Math.floor(Math.random()*computerOptions.length)];
+  let computerChoice = computerOptions[Math.floor(Math.random() * computerOptions.length)];
 
-  console.log(computerChoice);
-  }
+  return computerChoice;
+}
+
+console.log(getComputerChoice());
 
 //FUNCTION #2: Play a round of the game
 function playRound(playerSelection, computerSelection) {
