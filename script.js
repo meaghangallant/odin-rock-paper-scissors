@@ -1,5 +1,4 @@
 // FUNCTION #1: Getting computer's randomized choice 
-
 function getComputerChoice() {
   let computerOptions = ['rock', 'paper', 'scissors'];
 
@@ -8,12 +7,16 @@ function getComputerChoice() {
   return computerChoice;
 }
 
-//console.log(getComputerChoice());
+function getPlayerSelection(){
+  let playerChoice = prompt("Will you choose rock, paper, or scissors?");
+
+  return playerChoice;
+}
 
 //FUNCTION #2: Play a round of the game
-function playRound(playerSelection, computerSelection) {
+function playRound(){
+  playerSelection = getPlayerSelection();
   computerSelection = getComputerChoice();
-
   if (playerSelection == computerSelection) {
       return `You both chose ${playerSelection}. It's a tie!`;
   } else if (playerSelection == "rock" && computerSelection == "scissors"
@@ -24,9 +27,3 @@ function playRound(playerSelection, computerSelection) {
       return `${computerSelection} beats ${playerSelection}. Sorry, you lose.`;
   }
 }
-
-console.log(playRound("rock"));
-
-
-//Function #3: Play a game (5 rounds)
-//function playGame(){}
